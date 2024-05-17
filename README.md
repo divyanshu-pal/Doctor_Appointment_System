@@ -1,4 +1,4 @@
-#Introduction
+**Introduction**
 
 Welcome to the Doctor Appointment System, a comprehensive full-stack application designed to streamline the process
 of scheduling and confirming medical appointments. This project leverages modern web technologies to provide a
