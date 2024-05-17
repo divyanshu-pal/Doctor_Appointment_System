@@ -22,3 +22,17 @@ seamless experience for patients and doctors alike.
 ***Database***: MongoDB for flexible and scalable data storage.
 
 ***Authentication***: JSON Web Tokens (JWT) for secure user authentication and session management.
+
+# Website Images
+**Register Page**
+![Screenshot (274)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/0f18a74d-b2e5-43cb-956c-8c8c98216251)
+**Login Page**
+![Screenshot (276)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/52f8fec7-155c-4ec9-badd-d77bba416bbd)
+![Screenshot (277)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/ac038a89-3e71-434d-abcc-89b1bfde071b)
+**Home Page**
+***All registered doctor list***
+![Screenshot (278)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/bc7116f7-1c30-4b69-a255-760aa1e267a3)
+***Apointment list of the doctor for the current user***
+![Screenshot (279)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/80dc80ce-56c0-46d8-9821-3cbb481105fe)
+***Aplication form for applying doctor***
+![Screenshot (280)](https://github.com/divyanshu-pal/Doctor_Appointment_System/assets/86774540/d27b4493-10db-45d2-b0c8-1b3ea5a7b1c5)
