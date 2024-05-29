@@ -9,6 +9,13 @@ dotenv.config();
 
 // Connect to MongoDB
 connectDB();
+const corsOptions = {
+  origin: `https://appointment-8wngyb8h9-divyanshu-pals-projects.vercel.app`,
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+// Apply CORS middleware with options
+app.use(cors(corsOptions));
 
 // Create Express app
 const app = express();
@@ -18,13 +25,7 @@ app.use(express.json()); // Parse JSON bodies
 app.use(morgan("dev")); // Morgan for logging (development mode)
 
 // CORS Configuration
-const corsOptions = {
-  origin: `https://appointment-8wngyb8h9-divyanshu-pals-projects.vercel.app`,
-  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-};
 
-// Apply CORS middleware with options
-app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/v1/user", require("./routes/userRoutes"));
