@@ -11,7 +11,7 @@ dotenv.config();
 connectDB();
 const app = express();
 const corsOptions = {
-  origin: `https://appointment-8wngyb8h9-divyanshu-pals-projects.vercel.app`,
+  origin: `https://appointment-grnej82e0-divyanshu-pals-projects.vercel.app`,
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
