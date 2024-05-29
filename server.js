@@ -1,41 +1,40 @@
 const express = require("express");
-const colors = require("colors");
-const moragan = require("morgan");
+const morgan = require("morgan"); // Corrected spelling from moragan to morgan
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cors = require('cors');
 
-// Use CORS (Enable All CORS Requests)
-
-//dotenv conig
+// Load environment variables from a .env file
 dotenv.config();
 
-//mongodb connection
+// Connect to MongoDB
 connectDB();
 
-//rest obejct
+// Create Express app
 const app = express();
 
-//middlewares
-app.use(express.json());
-app.use(moragan("dev"));
+// Middleware
+app.use(express.json()); // Parse JSON bodies
+app.use(morgan("dev")); // Morgan for logging (development mode)
+
+// CORS Configuration
 const corsOptions = {
-  origin: `https://appointment-mishc3i82-divyanshu-pals-projects.vercel.app`,
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: 'https://appointment-mishc3i82-divyanshu-pals-projects.vercel.app',
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+// Apply CORS middleware with options
 app.use(cors(corsOptions));
-//routes
+
+// Routes
 app.use("/api/v1/user", require("./routes/userRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 app.use("/api/v1/doctor", require("./routes/doctorRoutes"));
 
-//port
+// Define port
 const port = process.env.PORT || 8080;
-//listen port
+
+// Start server
 app.listen(port, () => {
-  console.log(
-    `Server Running in Mode on port ${process.env.PORT}`
-      
-  );
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`);
 });
