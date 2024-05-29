@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(moragan("dev"));
 const corsOptions = {
-  origin: 'https://appointment-my3kb1kii-divyanshu-pals-projects.vercel.app',
+  origin: `https://appointment-mishc3i82-divyanshu-pals-projects.vercel.app`,
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
