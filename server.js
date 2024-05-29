@@ -19,7 +19,12 @@ const app = express();
 //middlewares
 app.use(express.json());
 app.use(moragan("dev"));
-app.use(cors());
+const corsOptions = {
+  origin: 'https://appointment-my3kb1kii-divyanshu-pals-projects.vercel.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
 //routes
 app.use("/api/v1/user", require("./routes/userRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
