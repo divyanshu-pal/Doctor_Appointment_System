@@ -19,7 +19,7 @@ app.use(morgan("dev")); // Morgan for logging (development mode)
 
 // CORS Configuration
 const corsOptions = {
-  origin: 'https://appointment-mishc3i82-divyanshu-pals-projects.vercel.app',
+  origin: `https://appointment-8wngyb8h9-divyanshu-pals-projects.vercel.app`,
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
